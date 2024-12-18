@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do You Love Anushka?</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            color: #ff3366;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .checkbox-container {
+            margin-top: 20px;
+        }
+
+        .checkbox {
+            display: inline-block;
+            background-color: #ff6699;
+            border: 2px solid #ff3366;
+            color: white;
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .checkbox:hover {
+            background-color: #ff3366;
+            transform: scale(1.1);
+        }
+
+        .heart {
+            margin-top: 30px;
+            font-size: 4rem;
+            color: #ff3366;
+            animation: pop 0.5s ease-in-out;
+            display: none;
+        }
+
+        @keyframes pop {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <h1>DO YOU LOVE ANUSHKA?</h1>
+    <div class="checkbox-container">
+        <div class="checkbox" onclick="showHeart()">Yes</div>
+        <div class="checkbox" onclick="showHeart()">Yes</div>
+    </div>
+    <div class="heart" id="heart">❤️</div>
+
+    <script>
+        function showHeart() {
+            const heart = document.getElementById('heart');
+            heart.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
